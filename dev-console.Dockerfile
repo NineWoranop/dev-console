@@ -40,10 +40,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
-# Create non-root user
-RUN useradd -m -s /bin/bash devuser \
-    && chown -R devuser:devuser /opt/maven
-
 # Verify installations
 RUN set -x \
     && java -version \
@@ -51,8 +47,6 @@ RUN set -x \
     && mvn --version \
     && terraform version \
     && aws --version
-
-USER devuser
 
 # Default command
 CMD ["bash"]
