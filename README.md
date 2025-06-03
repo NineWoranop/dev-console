@@ -11,6 +11,7 @@ This repository provides a Docker-based development environment with pre-install
 - Terraform 1.6.6
 - AWS CLI v2
 - Git, Telnet, Net-tools, Ping
+- Docker, Docker-Compose 2.20.2
 
 ## Environment Variables
 
