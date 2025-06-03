@@ -25,7 +25,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     net-tools \
     inetutils-ping \
     unzip \
-	lsb-release \
+    openssl \
+    fuse-overlayfs \
+    lsb-release \
     gnupg && \
     # Install Maven
     curl -fsSL https://dlcdn.apache.org/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz | tar -xz -C /opt && \
